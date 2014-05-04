@@ -1,0 +1,21 @@
+name: Slender
+description: Plugin for the Slender game
+version: 0.0.3
+main: com.frogman786.slender.Main
+depend: [Froggles]
+commands:
+  cfgdebug:
+    description: cfg debug command
+  trackdebug:
+    description: tracking debug
+  track:
+    description: tracks a player with compass
+  slender:
+    description: main command for all things slender
+permissions:
+    frog.slender.admin:
+        description: node for slender admins
+        default: false
+    frog.slender.player:
+        description: node for players of slender
+        default: true
