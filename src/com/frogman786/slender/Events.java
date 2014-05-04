@@ -22,8 +22,8 @@ public class Events implements Listener {
 	}
 	@EventHandler
 	public void onPlayerDeath(PlayerDeathEvent evt){
-		if(Main.playingmap.containsKey(evt.getEntity().getName())){
-			// TODO add stuffs here for when a player dies in game
+		if(Main.playinglist.contains(evt.getEntity().getName())){
+			
 		}
 	}
 }

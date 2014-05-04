@@ -8,7 +8,7 @@ public class Tracking implements CommandExecutor{
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		// TODO Auto-generated method stub
+		// TODO tracking test command
 		return false;
 	}
 

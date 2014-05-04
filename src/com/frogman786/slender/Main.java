@@ -1,6 +1,8 @@
 package com.frogman786.slender;
  
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.bukkit.Bukkit;
@@ -9,14 +11,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.frogman786.froggles.commands.cfg;
+import com.frogman786.froggles.commands.tracking;
 import com.frogman786.slender.commands.General;
-import com.frogman786.slender.commands.Tracking;
-import com.frogman786.slender.commands.Cfg;
  
 public class Main extends JavaPlugin{
    
     private static Plugin plugin;
-    public static Map<String, String> playingmap = new HashMap<String, String>();
+    public static List<String> playinglist = new ArrayList<String>();
     public static Map<String, String> configmap = new HashMap<String, String>();
     public static Map<String,Boolean> trackingmap = new HashMap<String, Boolean>();
     
@@ -52,6 +54,8 @@ public class Main extends JavaPlugin{
     }
     
     private void commandini(){
+    	//main
+    	getCommand("slender").setExecutor(new General());
         //compass
         getCommand("track").setExecutor(new tracking());
         getCommand("untrack").setExecutor(new tracking());

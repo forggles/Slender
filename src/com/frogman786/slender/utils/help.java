@@ -2,7 +2,7 @@ package com.frogman786.slender.utils;
 
 import org.bukkit.entity.Player;
 
-public class help {
+public class help { // TODO write help stuffs
 	private static String[] basic = {"line1\n","line2"};
 	private static String[] admin = {"line1\n","line2\n"};
 	public static String getHelpMessage(Player p){

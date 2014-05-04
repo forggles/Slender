@@ -2,14 +2,15 @@ package com.frogman786.slender.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import com.frogman786.slender.Main; // TODO config stuffs
+import com.frogman786.slender.Main;
 
 public class Tracking {
 	public static Player getNearest(Player p){
 		double closest = Double.MAX_VALUE;
 		Player closestp = null;
-		for(Player i : Bukkit.getOnlinePlayers()){
-			if(!(isSneaking(i)) && i!=p){ // TODO add a hashmap config check on this one so sneaking can be enabled/disabled
+		for(String s : Main.playinglist){
+			Player i = Bukkit.getPlayer(s); 
+			if(!(isSneaking(i)) && i!=p){
 			double dist = i.getLocation().distance(p.getPlayer().getLocation());
 				if (closest == Double.MAX_VALUE || dist < closest){
 					closest = dist;
@@ -26,8 +27,9 @@ public class Tracking {
 	}
 	public static double getNearestDistance(Player p){
 		double closest = Double.MAX_VALUE;
-		for(Player i : Bukkit.getOnlinePlayers()){
-			if(!(isSneaking(i)) && i!=p){ // TODO add a hashmap config check on this one so sneaking can be enabled/disabled
+		for(String s : Main.playinglist){
+			Player i = Bukkit.getPlayer(s); 
+			if(!(isSneaking(i)) && i!=p){
 			double dist = i.getLocation().distance(p.getPlayer().getLocation());
 				if (closest == Double.MAX_VALUE || dist < closest){
 					closest = dist;
