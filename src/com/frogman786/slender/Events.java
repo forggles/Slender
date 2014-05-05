@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerGameModeChangeEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 import com.frogman786.slender.Main;
@@ -13,8 +14,8 @@ public class Events implements Listener {
 	@EventHandler
 	public void onPlayerMove(PlayerMoveEvent evt){
 		Player player = evt.getPlayer();
-		if(Main.trackingmap.containsKey(player.getName())){
-			if(Main.trackingmap.get(player.getName())){
+		if(Main.playinglist.contains(player.getName())){
+			if(Main.playinglist.get(0) == player.getName()){
 				Player tracked = Tracking.getNearest(player);
 				player.setCompassTarget(tracked.getLocation());
 			}
@@ -25,5 +26,9 @@ public class Events implements Listener {
 		if(Main.playinglist.contains(evt.getEntity().getName())){
 			
 		}
+	}
+	@EventHandler
+	public void onPlayerspawn(Player evt){// tihs is meant to do something but I can't remember what
+		
 	}
 }

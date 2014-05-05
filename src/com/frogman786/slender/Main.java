@@ -63,7 +63,17 @@ public class Main extends JavaPlugin{
         getCommand("cfgdebug").setExecutor(new cfg());
         getCommand("trackdebug").setExecutor(new tracking());
     }
-   
+   // TODO write up
+    // effects hotswapable
+    // normal player stoneaxe, iron helmet, 10 steak
+    // slender compass, bow(infinity), arrow, wood sword, 16 enderpearls, stained leather pants chest boots (FFFFFF)
+    // lives 3
+    // command tree /general <join/quit/admin>
+    // admin effects <effect> [on/off]
+    // admin define <1/2>
+    // admin defineend <1/2> (enderman can't enter)
+    // admin 
+    
    
    
  
