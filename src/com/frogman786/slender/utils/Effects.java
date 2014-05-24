@@ -7,7 +7,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class Effects { // TODO workout how to do potion effects
 	public static void giveEffect(Player p,int pot){
-		PotionEffect effect = (pot,60,1);
-		p.addPotionEffect(effect);
+		//PotionEffect effect = (pot,60,1);
+		//p.addPotionEffect(effect);
 	}
 }

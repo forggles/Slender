@@ -11,9 +11,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.frogman786.froggles.commands.cfg;
-import com.frogman786.froggles.commands.tracking;
+import com.frogman786.slender.commands.Cfg;
 import com.frogman786.slender.commands.General;
+import com.frogman786.slender.commands.Tracking;
  
 public class Main extends JavaPlugin{
    
@@ -57,11 +57,11 @@ public class Main extends JavaPlugin{
     	//main
     	getCommand("slender").setExecutor(new General());
         //compass
-        getCommand("track").setExecutor(new tracking());
-        getCommand("untrack").setExecutor(new tracking());
+        getCommand("track").setExecutor(new Tracking());
+        getCommand("untrack").setExecutor(new Tracking());
         //debugs
-        getCommand("cfgdebug").setExecutor(new cfg());
-        getCommand("trackdebug").setExecutor(new tracking());
+        getCommand("cfgdebug").setExecutor(new Cfg());
+        getCommand("trackdebug").setExecutor(new Tracking());
     }
    // TODO write up
     // effects hotswapable
